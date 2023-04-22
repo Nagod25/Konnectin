@@ -10,7 +10,8 @@ import Blog from "../../../pages/DefaultRoutes/blog";
 import BlogContent from "../../../pages/DefaultRoutes/blog/feeds/feed/blogContent";
 import Feeds from "../../../pages/DefaultRoutes/blog/feeds";
 import './index.css'
-import { Suspense } from 'react'
+import { Suspense } from 'react';
+import Admin from './Admin';
 
 
 const DashBoard = () => {
@@ -178,6 +179,7 @@ const DashBoard = () => {
                         <Route path="/blog/:feed" element={<Feeds />} />
                         <Route path="/blog/:feed/:title" element={<BlogContent />} />
                     </Route>
+                    <Route path='/admin' element={<Admin />}/>
                     <Route exact path='/log-out' element={<LogOut />}/>
                 </Routes>
             </div> 

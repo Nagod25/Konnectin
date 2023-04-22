@@ -21,6 +21,8 @@ import BlogContent from "./pages/DefaultRoutes/blog/feeds/feed/blogContent";
 import Feeds from "./pages/DefaultRoutes/blog/feeds";
 import RouteIdentifier from "./layouts/routeIdentifier";
 import VerifyMail from "./pages/sign/signup/verifyMail";
+import Admin from "./pages/ProtectedRoutes/DashBoard/Admin";
+import TermsAndCondition from "./pages/DefaultRoutes/t&c/TermsAndCondition";
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
             <Route path="/internship" element={<Internship />} />
             <Route path="/resume" element={<ResumeBuilder />} />
             <Route path="/resume/options" element={<Options />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/t&c" element={<TermsAndCondition />}/>
 
             <Route path="/blog/" element={<Blog />}>
               <Route path="/blog/:feed" element={<Feeds />} />
